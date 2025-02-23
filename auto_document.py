@@ -54,8 +54,7 @@ def generate_subfolder_summaries(file_summaries):
 
     intermediate_summaries = {}
     for folder_path, summaries in folder_summaries.items():
-        # If there's a concern about token limits, you might chunk these summaries
-        # For demonstration, we'll do a single pass
+        # If the repos get too big, we'll have to chunk this
         joined_summaries = "\n\n".join(summaries)
 
         prompt = (
